@@ -1,21 +1,13 @@
+.client-form {
+  padding-top: 20px;
 
- .client-form {
+  margin-top: 40px;
 
- padding-top: 20px;
+  mat-form-field {
+    width: 60%;
+  }
 
- margin-top: 40px;
-
-    mat-form-field {
-
-      width: 60%;
-
-    }
-
-    button {
-
+  button {
     font: 1em sans-serif;
-
-    }
- }
-
-
+  }
+}
