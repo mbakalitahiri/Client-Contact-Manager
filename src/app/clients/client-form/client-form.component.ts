@@ -1,5 +1,11 @@
+import { ClientService } from './../../services/client.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-client-form',
@@ -14,7 +20,7 @@ export class ClientFormComponent implements OnInit {
   email = new FormControl('', Validators.required);
   telephoneNumber = new FormControl('');
   companyName = new FormControl('', Validators.required);
-  constructor(fb: FormBuilder) {
+  constructor(fb: FormBuilder, private clientSvc: ClientService) {
     this.clientForm = fb.group({
       firstname: this.firstname,
       lastname: this.lastname,
@@ -26,6 +32,6 @@ export class ClientFormComponent implements OnInit {
 
   ngOnInit(): void {}
   saveClient(): void {
-    console.log(this.clientForm.value);
+    this.clientSvc.save(this.clientForm.value);
   }
 }
