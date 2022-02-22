@@ -16,6 +16,7 @@ import { CustomMaterialModule } from '../custom-material/custom-material.module'
     SharedModule,
     CustomMaterialModule,
   ],
+  providers:[],
   exports: [ClientPageComponent, ClientFormComponent],
 })
 export class ClientModule {}
