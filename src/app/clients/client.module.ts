@@ -12,10 +12,10 @@ import { CustomMaterialModule } from '../custom-material/custom-material.module'
   imports: [
     CommonModule,
     ClientRoutingModule,
-     ReactiveFormsModule,
+    ReactiveFormsModule,
     SharedModule,
-    CustomMaterialModule
+    CustomMaterialModule,
   ],
-  exports:[ClientPageComponent, ClientFormComponent]
+  exports: [ClientPageComponent, ClientFormComponent],
 })
-export class ClientModule { }
+export class ClientModule {}

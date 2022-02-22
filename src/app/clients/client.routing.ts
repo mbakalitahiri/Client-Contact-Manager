@@ -7,7 +7,10 @@ const routes: Routes = [
     path: '',
     component: ClientPageComponent,
   },
-
+  {
+    path: ':id',
+    component: ClientPageComponent,
+  },
 ];
 
 @NgModule({
